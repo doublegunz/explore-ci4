@@ -6,4 +6,11 @@ class NewsModel extends Model
 {
     protected $table = 'news';
     protected $allowedFields = ['title', 'slug' ,'body'];
+
+    protected $validationRules = [
+        'title' => 'required',
+        'body' => 'required'
+    ];
+
+    protected $skipValidation = false;
 }

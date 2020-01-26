@@ -33,7 +33,7 @@
                         <tbody>
                             <?php if (!empty($news) && is_array($news)) { ?>
                                 <?php foreach ($news as $row) { ?>
-                                    <tr>
+                                    <tr class="text-center">
                                         <td><?php echo $row['title']; ?></td>
                                         <td><?php echo $row['slug']; ?></td>
                                         <td>
