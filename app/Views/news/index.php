@@ -26,6 +26,7 @@
                         <thead>
                             <tr class="text-center">
                                 <th scope="col">Title</th>
+                                <th scope="col">Slug</th>
                                 <th scope="col">Description</th>
                                 <th scope="col">Action</th>
                             </tr>
@@ -36,6 +37,7 @@
                                     <tr class="text-center">
                                         <td><?php echo $row['title']; ?></td>
                                         <td><?php echo $row['slug']; ?></td>
+                                        <td><?php echo substr($row['body'], 0, 30); ?></td>
                                         <td>
                                             <a href="<?php echo base_url('news/edit/' . $row['id']); ?>" class="btn btn-primary btn-sm">Edit</a>
                                             <a href="<?php echo base_url('news/delete/' . $row['id']); ?>" class="btn btn-danger btn-sm" onclick="return confirm('kamu yakin?');">Delete</a>
@@ -45,7 +47,7 @@
                                 <?php } ?>
                             <?php } else { ?>
                                 <tr>
-                                    <td colspan="3" class="text-center">Data News Kosong.</td>
+                                    <td colspan="4" class="text-center">Data News Kosong.</td>
                                 </tr>
 
                             <?php } ?>
